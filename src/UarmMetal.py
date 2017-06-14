@@ -463,7 +463,8 @@ class UarmMetal():
 
         if command[0:3] == "POS":
             position = map(float, command[3:].split(','))
-            self.uarm.set_position(position[0], position[1], position[2], wait=True)
+            print "Move: x: " , position[0] , ", y: " , position[1] , ", z: " , position[2]
+            self.uarm.set_position(position[0], position[1], position[2])
             self.wait = False
 
         if command[0:2] == "WR":
