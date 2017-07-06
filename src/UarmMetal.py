@@ -479,7 +479,7 @@ class UarmMetal():
         if command[0:2] == "JA":
             angle = map(float, command[2:].split(','))
             for i in range(0, len(angle)):
-                self.uarm.set_servo_angle(i, angle[i], wait=True)
+                self.uarm.set_servo_angle(i, angle[i])
             self.wait = False
 
         if command[0:4] == "BEEP":
